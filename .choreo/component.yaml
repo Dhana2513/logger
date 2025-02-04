@@ -1,0 +1,17 @@
+schemaVersion: 1.1
+
+endpoints:
+  - name: logging-service
+    displayName: Logging Service
+    service:
+      basePath: /logs
+      port: 3000
+    type: REST
+    networkVisibilities: 
+      - Public
+    schemaFilePath: openapi.yaml
+
+configuration:
+  env:
+    - name: PORT
+      value: "3000"
